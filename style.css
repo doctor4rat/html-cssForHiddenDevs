@@ -1,0 +1,45 @@
+.card-container {
+    perspective: 1000px;
+    width: 400px;
+    height: 640px;
+    margin: 50px auto;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Added drop shadow */
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border-radius: 10px;
+    background-color: #111111; /* Updated background color */
+    color: #EEEEEE; /* Updated text color to ensure contrast */
+}
+
+.card__face--back {
+    transform: rotateY(180deg);
+}
+
+.card__face_back_text{
+    user-select: none;
+}
+
+.card__face_front_text{
+    user-select: none;
+}

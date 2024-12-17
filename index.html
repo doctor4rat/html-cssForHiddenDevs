@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card-container">
+    <div class="card" id="myCard">
+        <div class="card__face card__face--front">
+            <p class="card__face_front_text">Front Text</p>
+        </div>
+        <div class="card__face card__face--back">
+            <p class="card__face_back_text">Back Text</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const card = document.getElementById('myCard');
+    card.addEventListener('click', function() {
+        card.classList.toggle('is-flipped');
+    });
+</script>
+
+</body>
+</html>
